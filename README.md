@@ -39,3 +39,6 @@ Then went to Flourish to see what it looked like as a race chart.
 Graph here:
 
 https://preview.flourish.studio/7043910/X2j5B5bEw3qbyVWuXPkuPbf8VjAZXI-RJqFfYKyxHaD2Z9kqWpu4e7TDIEcjaBD5/
+
+Deployed Heroku App:
+https://xfit2021.herokuapp.com/
