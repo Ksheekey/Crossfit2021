@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>One Division</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Row0 -->
+    <section class="row">
+      <div class="col-md-2">
+
+        <!-- kevin's drop down -->
+        <select id="selDataset" onchange="eventChanged(this.value)">
+        </select>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="chartdiv"></div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="eventTable"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Styles -->
+
+
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+
+  <!-- HTML -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <!-- <script src="static/js/data.js"></script> -->
+  <script src="static/js/app.js"></script>
+  <script src="static/js/dropwdown.js"></script>
+  <script src="static/js/event.js"></script>
+</body>
+
+</html>
