@@ -1,63 +1,92 @@
-d3.csv("crossfit.csv", function (data) {
+// // d3.csv("crossfit.csv", function (madison) {
 
-    cols = ['Name', 'Score']
+// //     cols = ['Name', 'Score']
 
-    var t = document.createElement('table');
-    t.classList.add('crossfit', 'events');
+// //     var t = document.createElement('table');
+// //     t.classList.add('crossfit', 'events');
 
-    t.appendChild(document.createElement('thead'));
-    t.querySelector('thead').appendChild(document.createElement('tr'));
+// //     t.appendChild(document.createElement('thead'));
+// //     t.querySelector('thead').appendChild(document.createElement('tr'));
 
-    for (var i = 0; i < cols.length; i++) {
-        var heading = document.createElement('td');
-        heading.textContent = cols[i];
-        t.querySelector('thead tr').appendChild(heading);
-    }
+// //     for (var i = 0; i < cols.length; i++) {
+// //         var heading = document.createElement('td');
+// //         heading.textContent = cols[i];
+// //         t.querySelector('thead tr').appendChild(heading);
+// //     }
 
-    document.getElementById('eventTable').appendChild(t);
+// //     document.getElementById('eventTable').appendChild(t);
 
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i].event_1)
-        if (data[i].event_1 == "") {
-            data[i].event_1 = "N/A"
-        }
-    }
+// //     for (var i = 0; i < madison.length; i++) {
+// //         console.log(madison[i].event_1)
+// //         if (madison[i].event_1 == "") {
+// //             madison[i].event_1 = "N/A"
+// //         }
+// //     }
 
-    
 
-    data.sort(function (a, b) {
-        if (a.event_1 < b.event_1) { return -1; }
-        if (a.event_1 > b.event_1) { return 1; }
-        return 0;
-    })
 
-    console.log(data)
+// //     madison.sort(function (a, b) {
+// //         if (a.event_1 < b.event_1) { return -1; }
+// //         if (a.event_1 > b.event_1) { return 1; }
+// //         return 0;
+// //     })
 
-    for (var i = 0; i < data.length; i++) {
-        var s = data[i]
-        var r = document.createElement('tr');
+// //     console.log(madison)
 
-        var nameCell = document.createElement('td');
-        nameCell.textContent = s.full_name;
+// //     for (var i = 0; i < madison.length; i++) {
+// //         var s = madison[i]
+// //         var r = document.createElement('tr');
 
-        var scoreCell = document.createElement('td');
-        scoreCell.textContent = s.event_1;
-        // if (scoreCell.textContent == "") {
-        //     scoreCell.textContent = "N/A"
-        // }
+// //         var nameCell = document.createElement('td');
+// //         nameCell.textContent = s.full_name;
 
-        // var affiliateCell = document.createElement('td');
-        // affiliateCell.textContent = s.affiliate;
+// //         var scoreCell = document.createElement('td');
+// //         scoreCell.textContent = s.event_1;
+// //         // if (scoreCell.textContent == "") {
+// //         //     scoreCell.textContent = "N/A"
+// //         // }
 
-        // var countryCell = document.createElement('td');
-        // countryCell.textContent = s.country;
+// //         // var affiliateCell = document.createElement('td');
+// //         // affiliateCell.textContent = s.affiliate;
 
-        r.appendChild(nameCell);
-        r.appendChild(scoreCell);
-        // r.appendChild(affiliateCell);
-        // r.appendChild(countryCell);
+// //         // var countryCell = document.createElement('td');
+// //         // countryCell.textContent = s.country;
 
-        t.appendChild(r)
-    }
+// //         r.appendChild(nameCell);
+// //         r.appendChild(scoreCell);
+// //         // r.appendChild(affiliateCell);
+// //         // r.appendChild(countryCell);
 
-});
+// //         t.appendChild(r)
+// //     }
+
+// // });
+
+// d3.csv("crossfit.csv", function (madison) {
+//     // selecting where to go and clearing output
+//     var tableBody = d3.select("tbody");
+//     tableBody.html("")
+
+
+//     for (var i = 0; i < madison.length; i++) {
+//         console.log(madison[i].event_1)
+//         if (madison[i].event_1 == "") {
+//             madison[i].event_1 = "N/A"
+//         }
+//     }
+
+//     madison.sort(function (a, b) {
+//         if (a.event_1 < b.event_1) { return -1; }
+//         if (a.event_1 > b.event_1) { return 1; }
+//         return 0;
+//     })
+
+//     for (var i = 0; i < madison.length; i++) {
+//         var s = madison[i]
+//         var row = tableBody.append("tr");
+//         var nameCell = row.append("td");
+//         nameCell.text(s.full_name);
+//         var scoreCell = row.append("td");
+//         scoreCell.text(s.event_1);
+//     }
+// })
