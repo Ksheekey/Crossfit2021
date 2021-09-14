@@ -58,7 +58,7 @@ am4core.ready(function (init) {
 
     var labelBullet = series.bullets.push(new am4charts.LabelBullet())
     labelBullet.label.horizontalCenter = "right";
-    labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#.0as')}";
+    labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#,###.')}";
     labelBullet.label.textAlign = "end";
     labelBullet.label.dx = -10;
     chart.zoomOutButton.disabled = true;
@@ -91,9 +91,7 @@ am4core.ready(function (init) {
         var tableBody = d3.select("tbody");
         tableBody.html("")
 
-
         for (var i = 0; i < madison74.length; i++) {
-            console.log(madison74[i].event_1)
             if (madison74[i].event_1 == "") {
                 madison74[i].event_1 = "N/A"
             }
@@ -115,12 +113,11 @@ am4core.ready(function (init) {
         }
     })
 
-
     function nextevent() {
         event++
 
         if (event > 15) {
-            event = 1;
+            stop();
         }
 
         var _list = []
@@ -149,10 +146,8 @@ am4core.ready(function (init) {
             madison74 = madison.slice(0, 74)
 
             if (event == 1) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_1 == "") {
@@ -176,10 +171,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 2) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_2 == "") {
@@ -203,10 +196,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 3) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_3 == "") {
@@ -230,10 +221,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 4) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_4 == "") {
@@ -257,10 +246,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 5) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_5 == "") {
@@ -284,10 +271,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 6) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_6 == "") {
@@ -311,10 +296,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 7) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_7 == "") {
@@ -338,10 +321,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 8) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_8 == "") {
@@ -365,10 +346,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 9) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_9 == "") {
@@ -392,10 +371,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 10) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_10 == "") {
@@ -419,10 +396,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 11) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_11 == "") {
@@ -446,10 +421,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 12) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_12_curve == "") {
@@ -473,10 +446,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 13) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_13 == "") {
@@ -500,10 +471,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 14) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_14 == "") {
@@ -527,10 +496,8 @@ am4core.ready(function (init) {
                 }
             }
             if (event == 15) {
-                // selecting where to go and clearing output
                 var tableBody = d3.select("tbody");
                 tableBody.html("")
-
 
                 for (var i = 0; i < madison74.length; i++) {
                     if (madison74[i].event_15 == "") {
@@ -5043,15 +5010,10 @@ am4core.ready(function (init) {
     let athleteDict = listofAthletes.map(x => ({ athlete: x, win: 0 }));
 
     for (var g = 1; g < 16; g++) {
-        // console.log(allData[g][0].score)
         if (allData[g][0].score == 874) {
-            // justinMedeiros++
             if (allData[g][0].athlete == athleteDict['athlete']) {
                 athleteDict['win']++
             }
-        }
-        else {
-            // console.log("nope")
         }
     }
 
